@@ -636,11 +636,8 @@ enum {
 	    return NO;
     }
 
-	// NSLog(@"setIconFamilyElement:%@ fromBitmapImageRep:%@ generated handle %p of size %d", NSFileTypeForHFSTypeCode(elementType), bitmapImageRep, hRawData, GetHandleSize(hRawData));
-
     if (hRawData == NULL)
 	{
-		NSLog(@"Null data returned to setIconFamilyElement:fromBitmapImageRep:");
 		return NO;
 	}
 
@@ -649,7 +646,6 @@ enum {
 
     if (result != noErr)
 	{
-		NSLog(@"SetIconFamilyData() returned error %d", result);
 		return NO;
 	}
 
@@ -1150,12 +1146,10 @@ enum {
     // formats...
     if (isPlanar)
 	{
-		NSLog(@"get32BitDataFromBitmapImageRep:requiredPixelSize: returning NULL due to isPlanar == YES");
 		return NULL;
 	}
     if (bitsPerSample != 8)
 	{
-		NSLog(@"get32BitDataFromBitmapImageRep:requiredPixelSize: returning NULL due to bitsPerSample == %d", bitsPerSample);
 		return NULL;
 	}
 
@@ -1207,7 +1201,6 @@ enum {
 	}
 	else
 	{
-		NSLog(@"get32BitDataFromBitmapImageRep:requiredPixelSize: returning NULL due to samplesPerPixel == %d, bitsPerPixel == %", samplesPerPixel, bitsPerPixel);
 		return NULL;
 	}
 
@@ -1241,12 +1234,10 @@ enum {
     // This could be made more flexible with some additional programming...
     if (isPlanar)
 	{
-		NSLog(@"get8BitDataFromBitmapImageRep:requiredPixelSize: returning NULL due to isPlanar == YES");
 		return NULL;
 	}
     if (bitsPerSample != 8)
 	{
-		NSLog(@"get8BitDataFromBitmapImageRep:requiredPixelSize: returning NULL due to bitsPerSample == %d", bitsPerSample);
 		return NULL;
 	}
 
@@ -1297,7 +1288,6 @@ enum {
 	}
 	else
 	{
-		NSLog(@"get8BitDataFromBitmapImageRep:requiredPixelSize: returning NULL due to samplesPerPixel == %d, bitsPerPixel == %", samplesPerPixel, bitsPerPixel);
 		return NULL;
 	}
 
@@ -1331,12 +1321,10 @@ enum {
     // This could be made more flexible with some additional programming...
     if (isPlanar)
 	{
-		NSLog(@"get8BitMaskFromBitmapImageRep:requiredPixelSize: returning NULL due to isPlanar == YES");
 		return NULL;
 	}
     if (bitsPerSample != 8)
 	{
-		NSLog(@"get8BitMaskFromBitmapImageRep:requiredPixelSize: returning NULL due to bitsPerSample == %d", bitsPerSample);
 		return NULL;
 	}
 
@@ -1373,7 +1361,6 @@ enum {
 	}
 	else
 	{
-		NSLog(@"get8BitMaskFromBitmapImageRep:requiredPixelSize: returning NULL due to samplesPerPixel == %d, bitsPerPixel == %", samplesPerPixel, bitsPerPixel);
 		return NULL;
 	}
 
@@ -1409,7 +1396,6 @@ enum {
     // This could be made more flexible with some additional programming...
     if (isPlanar)
 	{
-		NSLog(@"get1BitMaskFromBitmapImageRep:requiredPixelSize: returning NULL due to isPlanar == YES");
 		return NULL;
 	}
 
@@ -1474,7 +1460,6 @@ enum {
 	}
 	else
 	{
-		NSLog(@"get1BitMaskFromBitmapImageRep:requiredPixelSize: returning NULL due to bitsPerPixel == %d, samplesPerPixel== %d, bitsPerSample == %d", bitsPerPixel, samplesPerPixel, bitsPerSample);
 		return NULL;
 	}
 
